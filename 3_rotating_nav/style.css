@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 20px 10%;
+    transform-origin: top left;
+    background-color: white;
+    transition: 0.5s linear;
+}
+
+.container p {
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    transition: 0.5s linear;
+}
+
+.circle-container.show-nav {
+    transform: rotate(-90deg);
+}
+
+.circle-container button {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    padding: 0;
+}
+
+button.bars {
+    position: absolute;
+    right: 40px;
+    top: 115px;
+}
+
+button.xmark {
+    position: absolute;
+    right: 40px;
+    top: 105px;
+    transform: translateX(-90px);
+}
+
+nav {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out 0.2s;
+}
+
+nav.show-nav {
+    opacity: 1;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+    margin: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+nav li i {
+    margin-right: 20px;
+}
+
+nav li+li {
+    padding-left: 40px;
+}
+
+nav li+li+li {
+    padding-left: 80px;
+}
