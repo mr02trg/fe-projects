@@ -1,0 +1,1 @@
+- `window.parent.frames` - list of iframes contentwidow which you can use to postMessages to between sibling iframes
